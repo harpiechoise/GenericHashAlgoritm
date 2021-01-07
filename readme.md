@@ -148,7 +148,7 @@ La función Majority retorna la mayoria de 3 bits si dos o tres bits tienen el v
 
 Las operaciones anteriores se combinan para dar paso a estas operaciones el símbolo escogido no tiene relación con la operación de suma.
 
-![fórmula para la función SUM0 y SUM1](./images/sum.png)
+![fórmula para la función SUM0 y SUM1](./images/sum2.png)
 
 ![fórmula para la función Sigma0 y Sigma1](./images/sigmas.png)
 
