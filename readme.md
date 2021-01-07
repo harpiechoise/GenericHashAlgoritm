@@ -236,7 +236,9 @@ Paso 7: Calculamos los registros restantes, desde las palabras 17 a 64 `w_16 a w
 
 `w_n = σ1(w[n-2]) + w[n-7] + σ0(w[n-15]) + w[n-16]`
 
-Paso 8: Calculamos los valores temporales T0 y T1 que son registros que se usan para actualizar los hashes, para calcular los valores están dadas las siguientes formulas:
+Paso 8: Iteramos sobre W_0 a W_63
+
+Paso 7: Calculamos los valores temporales T0 y T1 que son registros que se usan para actualizar los hashes, para calcular los valores están dadas las siguientes formulas:
 
 `T0 = h + Σ1(e) + Ch(e, f, g) + k_1 + w_i`
 
