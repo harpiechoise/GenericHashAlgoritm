@@ -29,14 +29,14 @@ CONST_SHA256 = [
 
 # 5.3.3 SHA-256
 H = [
-    0x6A09E667,
-    0xBB67AE85,
-    0x3C6EF372,
-    0xA54FF53A,
-    0x510E527F,
-    0x9B05688C,
-    0x1F83D9AB,
-    0x5BE0CD19
+    0x6a09e667,
+    0xbb67ae85,
+    0x3c6ef372,
+    0xa54ff53a,
+    0x510e527f,
+    0x9b05688c,
+    0x1f83d9ab,
+    0x5be0cd19
 ]
 
 
@@ -223,22 +223,11 @@ class SaltAlgorithm():
 
     def get_salted_value(self):
         value = self.value
-        for i in range(self.salt):
+        for _ in range(self.salt):
             value = MyHASH(value).hexidigest()
         return value
 
 
 if __name__ == "__main__":
     contraseña = "1"
-    # b189ab6c4be13bf4db838f6f4d09e8b9803787e76bdf37b93bf40bd27172620f
-    guardada_en_la_base = SaltAlgorithm(
-        inital_value=contraseña, how_much=200).get_salted_value()
-
-    contraseña_usuario = input('Ingrese su contraseña: ')
-    contraseña_usuario = SaltAlgorithm(
-        inital_value=contraseña_usuario, how_much=200).get_salted_value()
-    print(f"{contraseña_usuario} == {guardada_en_la_base} = {contraseña_usuario == guardada_en_la_base}")
-    if contraseña_usuario == guardada_en_la_base:
-        print("Puede iniciar sesion")
-    else:
-        print("La contraseña que introdujo no es valida")
+    print(MyHASH(contraseña).hexidigest())
